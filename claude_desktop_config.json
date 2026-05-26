@@ -1,0 +1,24 @@
+{
+  "preferences": {
+    "coworkScheduledTasksEnabled": false,
+    "ccdScheduledTasksEnabled": false,
+    "coworkWebSearchEnabled": true,
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      }
+    },
+    "remoteToolsDeviceName": "desktop-iagt31d"
+  },
+  "mcpServers": {
+    "simplex": {
+      "command": "C:\\Users\\Leo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "args": ["D:\\Users\\Leo\\Desktop\\Facultad\\Modelos y Optimización I\\tp-simplex\\servidor.py"]
+    }
+  }
+}
