@@ -1,0 +1,90 @@
+============================================================
+  SOLUCIÓN ÓPTIMA
+============================================================
+  X1 = 13.333333  (13.3333 ≈ 40/3)
+  X2 = 40.000000
+  Z  = 146.666667  (146.6667 ≈ 440/3)
+
+============================================================
+  HOLGURAS / EXCEDENTES
+============================================================
+  Recurso1  holgura  = 0.000000  (restricción ACTIVA)
+  Recurso2  holgura  = 3.333333  (restricción no activa)
+  Demanda   excedent = 0.000000  (restricción ACTIVA)
+
+============================================================
+  PRECIOS SOMBRA (DUALES)
+============================================================
+  u_Recurso1  = 0.833333
+  u_Recurso2  = 0.000000
+  u_Demanda   = -1.333333
+
+============================================================
+  ANÁLISIS DE SENSIBILIDAD
+============================================================
+
+  OBJ COEFFICIENT RANGES (base sin cambio)
+  Variable     Valor actual  Incr. permitido  Decr. permitida
+  ----------------------------------------------------------
+  X1               5.000000         INFINITY         2.000000
+  X2               2.000000         1.333333         INFINITY
+
+  RIGHTHAND SIDE RANGES (base sin cambio)
+  Restricción    RHS actual  Incr. permitido  Decr. permitida
+  --------------------------------------------------------------
+  RECURSO1       240.000000        10.000000        80.000000
+  RECURSO2        70.000000         INFINITY         3.333333
+  DEMANDA         40.000000        20.000000        10.000000
+
+============================================================
+  ANÁLISIS PREGUNTA b
+  Subsidio $30 por bajar precio X1 de $5 a $2
+============================================================
+
+  El cálculo del enunciado ES INCORRECTO.
+  Razón: usa el valor de X1 (13,33 unidades) multiplicado
+  por el cambio de precio ($3), lo cual sería válido SOLO
+  si la base óptima no cambiara. Pero el rango permitido
+  de DISMINUCIÓN del coef. C1 es $2.00, es decir C1 puede
+  bajar hasta 5-2 = $3 antes de cambiar de base.
+
+  Bajar C1 de $5 a $2 implica una reducción de $3,
+  que EXCEDE el rango permitido ($2). Por lo tanto la base
+  CAMBIA y el análisis marginal ya no es válido.
+
+  Se debe resolver el problema con C1=2 para encontrar
+  la nueva solución óptima:
+
+  Nueva solución con C1=2: X1=0.0000, X2=60.0000, Z=120.0000
+  Pérdida real en Z: 146.6667 - 120.0000 = $26.6667
+  Subsidio ofrecido: $30
+  ¿Conviene? SÍ (pérdida $26.67 < $30)
+
+============================================================
+  ANÁLISIS PREGUNTA c – Tres alternativas (Recurso R1)
+============================================================
+
+  Precio sombra de R1 = $5/6 por unidad
+
+  Alt 1 – No modificar
+    Z = $440/3 = $146.6667
+
+  Alt 2 – Comprar 120 u. R1 por $90
+    RHS R1 = 360  (fuera del rango de sensibilidad → re-optimizado)
+    X1=15.0000, X2=40.0000
+    Z bruto = $155.0000  |  Costo compra = $90
+    Z neto  = $65.0000
+
+  Alt 3 – Vender 120 u. R1 por $90
+    RHS R1 = 120
+    INFACTIBLE: con X2>=40 se necesita al menos 4*40=160 de R1,
+    pero solo quedarían 120 unidades. El problema no tiene solución.
+    Z neto  = N/A (infactible)
+
+  (Alternativa 3 excluida por infactibilidad)
+
+  ► MEJOR ALTERNATIVA: No modificar  (Z neto = $146.6667)
+
+============================================================
+  FIN DEL ANÁLISIS
+============================================================
